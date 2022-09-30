@@ -7,10 +7,7 @@ type Data = {
 	pageInfo: PageInfo;
 };
 
-const query = groq`*[_type=='pageInfo'][0]{
-  ...,
-  technologies[]->
-}`;
+const query = groq`*[_type=='pageInfo'][0]`;
 
 export default async function handler(
 	req: NextApiRequest,
