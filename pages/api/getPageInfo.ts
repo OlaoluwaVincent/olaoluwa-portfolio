@@ -8,7 +8,7 @@ type Data = {
 
 const query = `*[_type=='pageInfo'][0]`;
 
-export default async function handler(
+export default async function getPageInfo(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {

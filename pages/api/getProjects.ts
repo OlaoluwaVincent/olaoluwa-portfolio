@@ -11,7 +11,7 @@ const query = `*[_type=='project']{
   technologies[]->
 }`;
 
-export default async function handler(
+export default async function getProjects(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {

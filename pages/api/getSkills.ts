@@ -8,7 +8,7 @@ type Data = {
 
 const query = `*[_type == 'skill']`;
 
-export default async function handler(
+export default async function getSkills(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {

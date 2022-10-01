@@ -11,7 +11,7 @@ const query = `*[_type=='experience']{
   technologies[]->
 }`;
 
-export default async function handler(
+export default async function getExperience(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {
