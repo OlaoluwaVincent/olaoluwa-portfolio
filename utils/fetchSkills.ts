@@ -1,5 +1,6 @@
 import { Skill } from '../typings';
-const vercel = 'https://vercel.com/olaoluwavincent/olaoluwa-portfolio';
+const vercel =
+	'https://vercel.com/olaoluwa-portfolio-mbqh6m7gk-olaoluwavincent.vercel.app';
 const local = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const fetchSkills = async () => {
