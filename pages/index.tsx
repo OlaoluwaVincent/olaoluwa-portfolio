@@ -16,13 +16,11 @@ import {
 	Project,
 	Social,
 } from '../typings';
-import {
-	fetchPageInfo,
-	fetchExperiences,
-	fetchSkills,
-	fetchProjects,
-	fetchSocials,
-} from '../utils/fetchData';
+import { fetchProjects } from '../utils/fetchProject';
+import { fetchPageInfo } from '../utils/fetchPageInfo';
+import { fetchSkills } from '../utils/fetchSkills';
+import { fetchSocials } from '../utils/fetchSocials';
+import { fetchExperiences } from '../utils/fecthExperience';
 
 type Props = {
 	pageInfo: PageInfo;
@@ -32,7 +30,7 @@ type Props = {
 	projects: Project[];
 };
 
-const Home = ({ experiences, pageInfo, projects, skills, socials }: Props) => {
+const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
 	return (
 		<div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-[#F7AB0A] scrollbar-track-gray-400/20'>
 			<Head>
