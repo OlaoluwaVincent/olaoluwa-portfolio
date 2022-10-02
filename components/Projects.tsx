@@ -11,7 +11,7 @@ const Projects = ({ projects }: Props) => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ delay: 1.5 }}
-			className='h-screen max-h-full relative max-w-full flex flex-col text-left justify-evenly items-center mx-auto px-5 z-0 overflow-hidden'
+			className='h-screen relative max-w-full flex flex-col text-left justify-evenly items-center mx-auto px-5 z-0 overflow-hidden'
 		>
 			<h3 className='absolute top-[70px] uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
 				Projects

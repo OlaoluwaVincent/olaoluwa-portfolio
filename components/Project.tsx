@@ -12,7 +12,7 @@ type Props = {
 
 const Project = ({ project, index, length }: Props) => {
 	return (
-		<div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-40 h-screen lg:h-full'>
+		<div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-40 h-screen lg:h-full mx-auto'>
 			<motion.img
 				initial={{ y: -300, opacity: 0 }}
 				transition={{ duration: 1.2 }}
@@ -35,18 +35,18 @@ const Project = ({ project, index, length }: Props) => {
 					</p>
 				</Link>
 
-				<div className='flex items-center space-x-2 justify-center object-fill'>
+				<div className='flex flex-wrap items-center justify-around object-fill max-w-[90%] gap-2'>
 					{project.technologies.map((technology) => (
 						<img
 							key={technology._id}
 							src={urlFor(technology.image).url()}
 							alt={technology.title}
-							className='h-10 w-10'
+							className='h-10 w-10 bg-white rounded-full object-contain max-w-[90%] mx-auto'
 						/>
 					))}
 				</div>
 
-				<p className='text-sm text-center md:text-lg md:text-left w-full pb-4'>
+				<p className='text-sm text-center md:text-lg md:text-left max-w-[90%] mx-auto'>
 					{project?.summary}
 				</p>
 			</div>
