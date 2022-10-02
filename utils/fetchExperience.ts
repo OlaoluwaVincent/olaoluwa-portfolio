@@ -1,6 +1,6 @@
+import { Experience } from '../typings';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { sanityClient } from '../../sanity';
-import { Experience } from '../../typings';
+import { sanityClient } from '../sanity';
 
 type Data = {
 	experiences: Experience[];
@@ -11,10 +11,7 @@ const query = `*[_type=='experience']{
   technologies[]->
 }`;
 
-export default async function getExperience(
-	req: NextApiRequest,
-	res: NextApiResponse<Data>
-) {
+export default async function fetchExperience() {
 	const experiences: Experience[] = await sanityClient.fetch(query);
-	res.status(200).json({ experiences });
+	return experiences;
 }

@@ -1,10 +1,13 @@
 import { Social } from '../typings';
+import type { NextApiResponse, NextApiRequest } from 'next';
+import { sanityClient } from '../sanity';
 
-const local = process.env.NEXT_PUBLIC_BASE_URL;
-
-export const fetchSocials = async () => {
-	const res = await fetch(`${local}/api/getSocials`);
-	const data = await res.json();
-	const socials: Social[] = data.socials;
-	return socials;
+type Data = {
+	socials: Social[];
 };
+const query = `*[_type=='social']`;
+
+export default async function fetchSocials() {
+	const socials: Social[] = await sanityClient.fetch(query);
+	return socials;
+}

@@ -1,10 +1,15 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { Skill } from '../typings';
+import { sanityClient } from '../sanity';
 
-const local = process.env.NEXT_PUBLIC_BASE_URL;
-
-export const fetchSkills = async () => {
-	const res = await fetch(`${local}/api/getSkills`);
-	const data = await res.json();
-	const skills: Skill[] = data.skills;
-	return skills;
+type Data = {
+	skills: Skill[];
 };
+
+const query = `*[_type == 'skill']`;
+
+export default async function fetchSkills() {
+	const skills: Skill[] = await sanityClient.fetch(query);
+
+	return skills;
+}

@@ -16,16 +16,11 @@ import {
 	Project,
 	Social,
 } from '../typings';
-// import { fetchProjects } from '../utils/fetchProject';
-// import { fetchPageInfo } from '../utils/fetchPageInfo';
-// import { fetchSkills } from '../utils/fetchSkills';
-// import { fetchSocials } from '../utils/fetchSocials';
-// import { fetchExperiences } from '../utils/fecthExperience';
-import getPageInfo from './api/getPageInfo';
-import getSkills from './api/getSkills';
-import getSocials from './api/getSocials';
-import getProjects from './api/getProjects';
-import getExperience from './api/getExperiences';
+import fetchPageInfo from '../utils/fetchPageInfo';
+import fetchSkills from '../utils/fetchSkills';
+import fetchSocials from '../utils/fetchSocials';
+import fetchProjects from '../utils/fetchProject';
+import fetchExperience from '../utils/fetchExperience';
 
 type Props = {
 	pageInfo: PageInfo;
@@ -36,7 +31,6 @@ type Props = {
 };
 
 const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
-	console.log(socials);
 	return (
 		<div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-[#F7AB0A] scrollbar-track-gray-400/20'>
 			<Head>
@@ -77,12 +71,12 @@ const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
-	const pageInfo = await getPageInfo;
-	const skills = await getSkills;
-	const socials = await getSocials;
-	const projects = await getProjects;
-	const experiences = await getExperience;
+export const getStaticProps: GetStaticProps = async () => {
+	const pageInfo = await fetchPageInfo();
+	const skills = await fetchSkills();
+	const socials = await fetchSocials();
+	const projects = await fetchProjects();
+	const experiences = await fetchExperience();
 
 	return {
 		props: {
@@ -94,6 +88,6 @@ export const getStaticProps = async () => {
 		},
 		// Next.js will revalidate the pages after the stipulated
 		// amount of time specified in Seconds
-		revalidate: 60,
+		revalidate: 10,
 	};
 };

@@ -1,8 +1,17 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { Project } from '../typings';
-const local = process.env.NEXT_PUBLIC_BASE_URL;
-export const fetchProjects = async () => {
-	const res = await fetch(`${local}/api/getProjects`);
-	const data = await res.json();
-	const projects: Project[] = data.projects;
-	return projects;
+import { sanityClient } from '../sanity';
+
+type Data = {
+	projects: Project[];
 };
+
+const query = `*[_type=='project']{
+...,
+  technologies[]->
+}`;
+
+export default async function fetchProjects() {
+	const projects: Project[] = await sanityClient.fetch(query);
+	return projects;
+}
