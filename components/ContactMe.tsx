@@ -38,13 +38,13 @@ const ContactMe = ({ pageInfo }: Props) => {
 		<motion.div
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
-			transition={{ delay: 1.5 }}
-			className='h-screen relative max-w-full flex flex-col text-center overflow-hidden justify-evenly items-center mx-auto md:flex-row md:text-left z-0 px-5 md:max-w-lg'
+			transition={{ delay: 0.3 }}
+			className='min-w-full min-h-screen flex flex-col text-center justify-evenly items-center mx-auto md:flex-col md:text-left z-0 px-5 md:max-w-lg space-y-5'
 		>
-			<h3 className='absolute top-[70px] uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
+			<h3 className='uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
 				Contact
 			</h3>
-			<div className='lg:mt-[120px] flex flex-col space-y-3 w-full justify-evenly items-center'>
+			<div className='flex flex-col space-y-3 justify-evenly items-center'>
 				<h4 className='text-lg font-semibold text-center text-[#F7AB0a]/80 animate-bounce'>
 					I have got just what you need.{' '}
 					<span className='underline decoration-white'>

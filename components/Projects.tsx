@@ -10,14 +10,14 @@ const Projects = ({ projects }: Props) => {
 		<motion.div
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
-			transition={{ delay: 1.5 }}
-			className='h-screen relative max-w-full flex flex-col text-left justify-evenly items-center mx-auto px-5 z-0 overflow-hidden'
+			transition={{ delay: 0.3 }}
+			className='min-h-screen relative max-w-full flex flex-col text-left justify-evenly items-center mx-auto px-5 z-0 overflow-hidden'
 		>
-			<h3 className='absolute top-[70px] uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
+			<h3 className='uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
 				Projects
 			</h3>
 
-			<motion.div className='w-full flex overflow-x-scroll snap-x snap-mandatory overflow-y-hidden z-20 lg:mt-[80px] scrollbar-thin scrollbar-thumb-[#F7AB0A] scrollbar-track-gray-400/20'>
+			<motion.div className='w-full flex overflow-x-scroll snap-x snap-mandatory overflow-y-hidden z-20 scrollbar-thin scrollbar-thumb-[#F7AB0A] scrollbar-track-gray-400/20'>
 				{projects.map((project, i) => (
 					<Project
 						key={`projects-done-${i}`}

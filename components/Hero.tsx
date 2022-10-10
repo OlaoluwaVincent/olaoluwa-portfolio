@@ -21,7 +21,7 @@ const Hero = ({ pageInfo }: Props) => {
 		delaySpeed: 2000,
 	});
 	return (
-		<div className='h-screen flex flex-col space-y-8 items-center justify-center overflow-hidden text-center'>
+		<div className='min-h-screen flex flex-col space-y-8 items-center justify-center overflow-hidden text-center'>
 			<BackgroundCircle />
 			<img
 				src={urlFor(pageInfo?.profilePicture).url()}

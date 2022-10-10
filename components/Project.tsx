@@ -12,7 +12,7 @@ type Props = {
 
 const Project = ({ project, index, length }: Props) => {
 	return (
-		<div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:p-40 h-screen lg:h-full mx-auto'>
+		<div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:px-40 lg:h-full mx-auto'>
 			<motion.img
 				initial={{ y: -300, opacity: 0 }}
 				transition={{ duration: 1.2 }}
@@ -20,7 +20,7 @@ const Project = ({ project, index, length }: Props) => {
 				viewport={{ once: true }}
 				src={urlFor(project?.image).url()}
 				alt='image'
-				className='w-[70vw] h-[20vh] md:h-[400px] md:w-[400px]'
+				className='w-[70vw] h-[30vh] md:h-[200px] md:w-[250px]'
 			/>
 			<div className='space-y-5 px-0 md:px-4 max-w-6xl'>
 				<h4 className='text-2xl font-semibold text-center'>
