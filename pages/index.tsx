@@ -42,7 +42,7 @@ const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
 			</Head>
 			<Header socials={socials} />
 			{/* Sections */}
-			<section className='space-y-14'>
+			<section className='space-y-10'>
 				<section id='hero' className=''>
 					<Hero pageInfo={pageInfo} />
 				</section>
@@ -62,7 +62,7 @@ const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
 					<ContactMe pageInfo={pageInfo} />
 				</section>
 				<Link href={'#hero'} className=''>
-					<footer className='sticky bottom-5 right-0 w-full cursor-pointer'>
+					<footer className='sticky bottom-8 right-0 w-full cursor-pointer z-50'>
 						<ArrowUpCircleIcon className='w-10 h-10 hover:fill-slate-500' />
 					</footer>
 				</Link>

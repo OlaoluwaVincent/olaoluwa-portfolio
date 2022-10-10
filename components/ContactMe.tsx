@@ -39,7 +39,7 @@ const ContactMe = ({ pageInfo }: Props) => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ delay: 0.3 }}
-			className='min-w-full min-h-screen flex flex-col text-center justify-evenly items-center mx-auto md:flex-col md:text-left z-0 px-5 md:max-w-lg space-y-5'
+			className='min-w-full max-h-screen flex flex-col text-center justify-evenly items-center mx-auto md:flex-col md:text-left z-0 px-5 md:max-w-lg space-y-5'
 		>
 			<h3 className='uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
 				Contact
