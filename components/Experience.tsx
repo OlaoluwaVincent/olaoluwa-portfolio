@@ -14,7 +14,7 @@ const Experience = ({ experiences }: Props) => {
 			transition={{ delay: 0.3 }}
 			className='min-h-screen max-w-full flex flex-col text-left overflow-hidden justify-evenly items-center mx-auto px-5'
 		>
-			<h3 className='uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
+			<h3 className='uppercase tracking-[5px] sm:tracking-[20px] text-gray-500 text-3xl'>
 				Experience
 			</h3>
 

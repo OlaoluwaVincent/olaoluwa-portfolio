@@ -11,13 +11,11 @@ type Props = {
 };
 
 const Project = ({ project, index, length }: Props) => {
+	console.log(urlFor(project?.image).url());
+
 	return (
 		<div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-5 md:px-40 lg:h-full mx-auto'>
 			<motion.img
-				initial={{ y: -300, opacity: 0 }}
-				transition={{ duration: 1.2 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
 				src={urlFor(project?.image).url()}
 				alt='image'
 				className='w-[70vw] h-[30vh] md:h-[200px] md:w-[250px]'

@@ -13,7 +13,7 @@ const Projects = ({ projects }: Props) => {
 			transition={{ delay: 0.3 }}
 			className='min-h-screen relative max-w-full flex flex-col text-left justify-evenly items-center mx-auto px-5 z-0 overflow-hidden'
 		>
-			<h3 className='uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
+			<h3 className='uppercase tracking-[5px] sm:tracking-[20px] text-gray-500 text-3xl'>
 				Projects
 			</h3>
 

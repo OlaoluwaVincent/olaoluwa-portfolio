@@ -13,7 +13,7 @@ const Skills = ({ skills }: Props) => {
 					<h3 className='uppercase tracking-[15px] sm:tracking-[20px] text-gray-500 text-3xl'>
 						Skills
 					</h3>
-					<h3 className='uppercase tracking-[3px] sm:tracking-[3px] text-gray-500 text-md text-center px-3 md:py-2'>
+					<h3 className='uppercase tracking-[3px] sm:tracking-[3px] text-gray-500 text-sm md:text-md text-center px-3 md:py-2'>
 						Hover over a skill for current proficiency
 					</h3>
 				</div>
