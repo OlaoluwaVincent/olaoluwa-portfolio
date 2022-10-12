@@ -26,7 +26,7 @@ const Header = ({ socials }: Props) => {
 				}}
 				className='flex items-center'
 			>
-				{/* Social Icons */}
+				{/* Social Icons
 				{socials.map((social) => (
 					<SocialIcon
 						key={social._id}
@@ -34,7 +34,15 @@ const Header = ({ socials }: Props) => {
 						fgColor='gray'
 						bgColor='transparent'
 					/>
-				))}
+				))} */}
+
+				<a
+					href='../olaoluwa.pdf'
+					download
+					className='bg-[#393939] px-4 py-2 hover:bg-gray-800'
+				>
+					Download CV
+				</a>
 			</motion.div>
 
 			<Link href={'/#contact'}>

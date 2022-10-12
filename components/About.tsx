@@ -37,12 +37,7 @@ const About = ({ pageInfo }: Props) => {
 						background
 					</h4>
 					<p className='text-base'>
-						{pageInfo?.backgroundInformation} Lorem ipsum dolor sit
-						amet consectetur adipisicing elit. Ipsam enim
-						exercitationem quo id. Praesentium architecto odio
-						repellat labore libero nulla omnis quam tempore
-						veritatis perferendis, doloribus delectus nostrum
-						asperiores porro.
+						{pageInfo?.backgroundInformation}
 					</p>
 				</div>
 			</div>
