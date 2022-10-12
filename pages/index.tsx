@@ -62,11 +62,11 @@ const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
 					<ContactMe pageInfo={pageInfo} />
 				</section>
 			</section>
-			<Link href={'#hero'} className=''>
+			{/* <Link href={'#hero'} className=''>
 				<footer className='sticky bottom-10 md:bottom-5 left-2 w-full cursor-pointer z-50'>
 					<ArrowUpCircleIcon className='w-10 h-10 hover:fill-slate-500' />
 				</footer>
-			</Link>
+			</Link> */}
 		</div>
 	);
 };

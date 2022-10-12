@@ -39,7 +39,7 @@ const Header = ({ socials }: Props) => {
 				<a
 					href='../olaoluwa.pdf'
 					download
-					className='bg-[#393939] px-4 py-2 hover:bg-gray-800'
+					className='bg-[#393939] px-4 py-2 hover:bg-gray-800/50'
 				>
 					Download CV
 				</a>
