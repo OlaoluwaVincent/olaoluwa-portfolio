@@ -28,9 +28,13 @@ const Project = ({ project, index, length }: Props) => {
 					{project?.title}
 				</h4>
 				<Link href={project?.linkToBuild}>
-					<p className='font-bold text-sm text-white m-0 text-center border-b max-w-max mx-auto cursor-pointer hover:border-[#F7AB0A]/40'>
+					<a
+						target='_blank'
+						rel='noopener noreferrer'
+						className='block font-bold text-sm text-white m-0 text-center border-b max-w-max mx-auto cursor-pointer hover:border-[#F7AB0A]/40'
+					>
 						LIVE Preview
-					</p>
+					</a>
 				</Link>
 
 				<div className='flex flex-wrap items-center justify-around object-fill max-w-[90%] gap-2'>
